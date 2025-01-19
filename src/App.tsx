@@ -11,9 +11,17 @@ import MultipleState from './2.BasicReact/4.MultipleStates/MultipleState'
 import HOComponentBeautiful from './2.BasicReact/5.HigherOrderComponent/HOComponentBeautiful'
 import CricketNewsCompoent from './2.BasicReact/5.HigherOrderComponent/CricketNewsCompoent'
 import FashionCOmpoent from './2.BasicReact/5.HigherOrderComponent/FashionCOmpoent'
+import CallingApi from './2.BasicReact/6.CallingAPi/CallingAPI'
+import Parent from './3.Communication/3.ChildToChild/Parent'
+import LifecycleComponent from './4.LifecycleOfComponent/LifecycleComponent.js'
+import MountingUnmountingParent from './4.LifecycleOfComponent/MountingAndUnmountingExample/MountingUnmountingParent.js'
+import UseEffectPhases from './5.UseEffect/UseEffectPhases.js'
+// import Parent from './3.Communication/2.ChildToParent/Parent'
+// import Parent from './3.Communication/1.ParentToChild/Parent'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [showUseEffectPhases, setUseEffectPhases] = useState(true);
 
   return (
     <>
@@ -24,13 +32,34 @@ function App() {
       {/* <MultiState /> */}
       {/* <MultipleState /> */}
 
-      <HOComponentBeautiful>
+      {/* <HOComponentBeautiful>
         <CricketNewsCompoent />
       </HOComponentBeautiful>
 
       <HOComponentBeautiful>
         <FashionCOmpoent />
-      </HOComponentBeautiful>
+      </HOComponentBeautiful> */}
+
+      {/* <CallingApi /> */}
+
+      {/* -- - - - - - - - - - - COMMUNICATION - - - - - - - - - - - - -  */}
+      {/* <Parent /> */}
+      {/* <Parent /> */}
+      {/* <Parent /> */}
+
+
+      {/* --------------------- LIFE CYCLE OF COMPONENT --------------- */}
+      {/* <LifecycleComponent /> */}
+      {/* <MountingUnmountingParent /> */}
+
+
+      {showUseEffectPhases ? <UseEffectPhases /> : null}
+      <br />
+      <button onClick={() => {
+        setUseEffectPhases(old => !old)
+      }}>show/hide UseEffectPhases</button>
+
+
     </>
   )
 }

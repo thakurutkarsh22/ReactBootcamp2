@@ -46,3 +46,9 @@ what ever function component return it is UI.
 
 
 // --------------------- FRAGMENTS -----------------
+
+
+//----------------------------- HOOKS -----------------------------
+// 1. useState -> That manages the state of local component.
+// 2. useEffect -> allows us to do side effect in our component, 
+    // side effect -> calling API, calling localstorage, adding and removing event listners.

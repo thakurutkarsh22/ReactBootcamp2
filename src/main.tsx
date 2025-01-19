@@ -5,7 +5,7 @@ import App from './App.tsx'
 import HelloComponent from './1.Intro/HelloComponent.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  // <StrictMode>
+    <App />,
+  // </StrictMode>,
 )
