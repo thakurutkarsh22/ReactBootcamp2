@@ -17,7 +17,7 @@ function UseEffectPhases() {
 
     /**
      *  WE USE THIS VERY RARELY 
-     *  NEVER INSIDE FLAVOUR 1 never set State,  i.e, setState(setData)
+     *  NEVER INSIDE FLAVOUR 1 never set State,  i.e, setState(setData) otherwise there would be infinite loop
      * 
      * ANY upate that happens to the component this Flavour1 will ALWAYS run
      */
@@ -39,13 +39,39 @@ function UseEffectPhases() {
 
     // useEffect(() => {
     //     console.log("In the use Effect Flavour2 :: working in ::: ", phase)
+
+    //     setCounter2(old => old + 1);
+
     //     return () => {
+
     //         // Unmouning phase
     //         // CLEANUP
     //         // timing (clearTimeout, clearInterval, making some values null etc)
     //         console.log("unmount Flavour2")
     //     }
     // }, []);
+
+
+    // ***** NEVER DO THIS *****
+    /**
+     * 
+     *     useEffect(() => {
+        console.log("In the use Effect Flavour2 :: working in ::: ", phase)
+
+        setCounter2(old => old + 1);
+
+        return () => {
+
+            // Unmouning phase
+            // CLEANUP
+            // timing (clearTimeout, clearInterval, making some values null etc)
+            console.log("unmount Flavour2")
+        }
+    }, [counter2]);
+     * 
+     * 
+     */
+
 
 
     // 3. --- FLAVOUR 3: it has filled Dependency Array: MOUNTING, SELECTIVELY work in UPDATE, and UNMOUNTING
@@ -89,3 +115,8 @@ function UseEffectPhases() {
 }
 
 export default UseEffectPhases;
+
+
+// USE EFFECT ALWAYS WORK AFTER THE REDERING (return ( <div> </div> ) )
+// RENDERING = creation of OBJECTS (h1, p, div) 
+// PAINTING = VISIBILITY OF OBJECT

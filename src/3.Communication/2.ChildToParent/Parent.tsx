@@ -7,7 +7,7 @@ function Parent() {
     const [childProblem, setChildProblem] = useState("");
 
 
-    function childCommunicatorHandler(data) {
+    function childCommunicatorHandler(data: string) {
         console.log(data, 'child data')
         // childProblem = data;
         setChildProblem(data);
