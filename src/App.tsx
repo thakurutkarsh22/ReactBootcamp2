@@ -19,6 +19,7 @@ import UseEffectPhases from './5.UseEffect/UseEffectPhases.js'
 import PokemonAPI from './6.PokemonAPI/PokemonAPI.js'
 import DigitalClock from './7.DigitalClock/DigitalClock.js'
 import Forms from './8.Forms/Forms.js'
+import UseRefHook from './9.useRefHook/useRefHook.js'
 // import Parent from './3.Communication/2.ChildToParent/Parent'
 // import Parent from './3.Communication/1.ParentToChild/Parent'
 
@@ -70,7 +71,10 @@ function App() {
         setUseEffectPhases(old => !old)
       }}>show/hide UseEffectPhases</button>  */}
 
-      <Forms />
+      {/* <Forms /> */}
+
+      <UseRefHook />
+
 
 
     </>
