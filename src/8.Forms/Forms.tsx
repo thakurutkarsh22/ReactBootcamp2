@@ -1,4 +1,5 @@
 import { useState } from "react";
+import InputComponent from "../9.useRefHook/Usage/InputComponent";
 
 
 enum Gender {
@@ -65,6 +66,7 @@ const DEFAULT_TOUCHED_VALUES: MyFormTOUCHED = {
 function Forms() {
     // SOURCE OF TRUTH OF FORM VALUES
     const [form, setForm] = useState<MyForm>(FORM_DEFAULT);
+    console.log(form, 'form')
     // SOURCE OF TRUTH OF FROM ERRORS
     const [error, setError] = useState<MyFormError>(DEFAULT_ERROR_FORM_VALUES);
     // SOURCE OF TRUTH FORM INPUT IS TOUCHED
