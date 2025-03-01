@@ -2,7 +2,7 @@ function PageNotFound() {
     return (
         <>
             <h1>
-                Page not found
+                Page not found in a beautiful manner like flipkart
             </h1>
         </>
     );

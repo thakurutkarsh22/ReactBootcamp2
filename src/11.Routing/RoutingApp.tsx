@@ -50,36 +50,27 @@ function RoutingApp() {
             {/* REGISTRATION OF ROUTES */}
 
             <Suspense fallback={<div>Loading....</div>}>
-            
-            <Routes>
+                <Routes>
 
-                {/* 1. SIMPLE ROUTING */}
-                <Route path="/" element={<HomePage />}></Route>
+                    {/* 1. SIMPLE ROUTING */}
+                    <Route path="/" element={<HomePage />}></Route>
 
-                <Route path="/admin" element={
-                    <PrivateRoute>
-                        <AdminPage />
-                    </PrivateRoute>
-                }></Route>
+                    <Route path="/admin" element={
+                        <PrivateRoute>
+                            <AdminPage />
+                        </PrivateRoute>
+                    }></Route>
 
-                {/* this route handles everying else  */}
-                <Route path="/*" element={<PageNotFound />} />
+                    {/* this route handles everying else  */}
+                    <Route path="/*" element={<PageNotFound />} />
 
-                {/*  2. Little complex routing    */}
+                    {/*  2. Little complex routing    */}
 
-                <Route path="/men" element={<MensPage />}>
-                    <Route path="shirt" element={<ShirtComponent />} />
-                    <Route path="ties" element={<TiesComponent />} />
-                </Route>
-
-
-
-
-
-            </Routes>
-            
-            
-            
+                    <Route path="/men" element={<MensPage />}>
+                        <Route path="shirt" element={<ShirtComponent />} />
+                        <Route path="ties" element={<TiesComponent />} />
+                    </Route>
+                </Routes>
             </Suspense>
         
         </>
